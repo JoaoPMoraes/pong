@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pong!</title>
+        <link rel="stylesheet" href="pongprincipal.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="titulo">pong.</h1>
+        </header>
+        <section id="gamejs">
+            <canvas width="600" height="400"></canvas> 
+        </section>
+        <section>
+            <canvas id="baseplacar" width="600" height="50"></canvas>
+        </section>
+        <section id="menugame">
+            <button type="button" class="botao" id="startgame">start.</button>
+            <button type="button" class="botao" id="resetgame">reset.</button>
+            <button type="button" class="botao" id="stopgame">stop.</button>
+        </section>
+        <script src="js/regrasdejogo.js"></script>
+        <script src="js/movimento.js"></script>
+
+    </body>
+</html>
