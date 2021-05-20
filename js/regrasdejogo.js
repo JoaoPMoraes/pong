@@ -1,4 +1,4 @@
-var tela = document.querySelector("canvas");
+var tela = document.querySelector("#telagame");
 var pincel = tela.getContext("2d");
 
 // ---------------- Variáveis
@@ -23,6 +23,9 @@ var yRaqueteB = yBola;
 var xBola = 300;
 var yBola = 200;
 
+var pointsPlayer1 = 0;
+var pointsPlayer2 = 0;
+
 
 // ---------------- Movimento
 
@@ -38,9 +41,6 @@ var yBola = 200;
 
 playgame();
 document.onkeydown = move;
-
-
-
 
 
 
