@@ -7,22 +7,38 @@
         <link rel="stylesheet" href="pongprincipal.css">
     </head>
     <body>
+
         <header>
             <h1 id="titulo">pong.</h1>
         </header>
+
         <section id="gamejs">
             <canvas width="600" height="400"></canvas> 
         </section>
-        <section>
+
+        <section id="abaixodojogo">
             <canvas id="baseplacar" width="600" height="50"></canvas>
+            <div class="table">
+                <ul class="placar">
+                    <li class="placarplayer" id="placarplayer1">0</li>
+                    <li class="placarplayer" id="placarplayer2">0</li>
+                </ul>
+            </div>
         </section>
-        <section id="menugame">
-            <button type="button" class="botao" id="startgame">start.</button>
-            <button type="button" class="botao" id="resetgame">reset.</button>
-            <button type="button" class="botao" id="stopgame">stop.</button>
-        </section>
-        <script src="js/regrasdejogo.js"></script>
+
+        <div id="divmenu">
+            <section id="menugame">
+                <button type="button" class="botao" id="startgame">start</button>
+                <button type="button" class="botao" id="stopgame">stop</button>
+            </section>
+        </div>
+
         <script src="js/movimento.js"></script>
+        <script src="js/colisao.js"></script>
+        <script src="js/draw.js"></script>
+        <script src="js/funcionamento.js"></script>
+        <script src="js/regrasdejogo.js"></script>
+        
 
     </body>
 </html>
