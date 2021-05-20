@@ -9,6 +9,9 @@ function refreshScreenPlay () {
     paredes();
     colisaoRaqueteA();
     colisaoRaqueteB();
+
+    finishgame();
+    
     
 }
 
@@ -16,28 +19,36 @@ function playgame() {
     setInterval(refreshScreenPlay, 1);
 }
 
-function start() {
-    var startGame = document.querySelector("#startgame");
+
+
+var startGame = document.querySelector("#startgame");
     startGame.addEventListener("click", function(){
         // console.log(ballspeed);
-        xBallSpeed = 1;
-        yBallSpeed = 1;
-    })
+        
+        
+    xBallSpeed = 1;
+    yBallSpeed = 1;
+})
+
+
+function finish () {
+    xBallSpeed = 0;
+    yBallSpeed = 0;
+    xBola = 300;
+    yBola = 200;
+    yRaqueteA = (400/2) - (raqueteAltura/2);
 }
 
-function finish() {
-    var stopgame = document.querySelector("#stopgame");
+var stopgame = document.querySelector("#stopgame");
     stopgame.addEventListener("click", function(){
-        // console.log(ballspeed);
-        xBallSpeed = 0;
-        yBallSpeed = 0;
-        xBola = 300;
-        yBola = 200;
-        yRaqueteA = (400/2) - (raqueteAltura/2);
-    })
+    // console.log(ballspeed);
+    finish();
+})
+
+function finishgame() {
+    if (pointsPlayer2 == 10 || pointsPlayer1 == 10) {
+        pointsPlayer1 = 0;
+        pointsPlayer2 = 0;
+        finish();
+    }
 }
-
-start();
-finish();
-
-
