@@ -10,11 +10,13 @@ function pontuacao () {
     if ( xBola < 5)
     {
         pointsPlayer2++;
+        estatoInicial();
         console.log(pointsPlayer2);
     }
     if ( xBola > 595)
     {
         pointsPlayer1++;
+        estatoInicial();
         console.log(pointsPlayer1);
     }
     

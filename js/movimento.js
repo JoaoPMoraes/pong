@@ -11,13 +11,11 @@ function move(evento) {
 
 function moveBall() {
     
-
-
-
     ball(xBola,yBola,raio);
     xBola+=xBallSpeed;
     yBola+=yBallSpeed;
 
+    
 
 }
 

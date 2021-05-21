@@ -1,6 +1,6 @@
-function paredes () {
+function colisaoParedes () {
     
-    if (xBola > 600-raio/2 || xBola < 0+raio/2)
+    if (xBola > 600 - raio/2 || xBola < 0+raio/2)
     {
         xBallSpeed = xBallSpeed * -1;
     }
@@ -20,7 +20,7 @@ function colisaoRaqueteA () {
 
 function colisaoRaqueteB () {
     
-    if (xBola + raio > xRaqueteB || xBola < yRaqueteB + raqueteAltura || xBola > yRaqueteB) 
+    if (xBola + raio > xRaqueteB && yBola - raio < yRaqueteB + raqueteAltura && yBola + raio > yRaqueteB) 
     {
         xBallSpeed *= -1;
     }

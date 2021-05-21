@@ -14,14 +14,36 @@ var y = (400/2) - (raqueteAltura/2);
 
 var raqueteAltura = 70;
 var raqueteLargura = 7;
-var xRaqueteA = 20;
+var xRaqueteA = 5;
 var yRaqueteA = (400/2) - (raqueteAltura/2);
-
-var xRaqueteB = 573;
-var yRaqueteB = yBola;
 
 var xBola = 300;
 var yBola = 200;
+
+// 588
+var xRaqueteB = 588;
+var yRaqueteB = (400/2) - (raqueteAltura/2);
+
+var velocidadeYOponente;
+
+velocidadeYOponente = 0;
+
+function movimentoOponente() {
+    if (yRaqueteB + raqueteAltura/2 + raio > 400 || yRaqueteB + raqueteAltura/2 - raio < 0) {
+        velocidadeYOponente *= -1;
+    }
+    yRaqueteB += velocidadeYOponente;
+}
+
+function estatoInicial() {
+    xBallSpeed = 1;
+    yBallSpeed = 1;
+    xBola = 300;
+    yBola = 200;
+    yRaqueteA = (400/2) - (raqueteAltura/2);
+    yRaqueteB = (400/2) - (raqueteAltura/2);
+}
+
 
 var pointsPlayer1 = 0;
 var pointsPlayer2 = 0;
@@ -39,8 +61,6 @@ var pointsPlayer2 = 0;
 
 
 
-playgame();
-document.onkeydown = move;
 
 
 
