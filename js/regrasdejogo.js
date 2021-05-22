@@ -29,7 +29,7 @@ var velocidadeYOponente;
 velocidadeYOponente = 0;
 
 function movimentoOponente() {
-    if (yRaqueteB + raqueteAltura/2 + raio > 400 || yRaqueteB + raqueteAltura/2 - raio < 0) {
+    if (yRaqueteB + raqueteAltura/2 > 400 || yRaqueteB + raqueteAltura/2 < 0) {
         velocidadeYOponente *= -1;
     }
     yRaqueteB += velocidadeYOponente;
@@ -40,8 +40,11 @@ function estatoInicial() {
     yBallSpeed = 1;
     xBola = 300;
     yBola = 200;
+    velocidadeYOponente = parseFloat((Math.random() * (1.0200 - 0.9800) + 0.9800).toFixed(4));
     yRaqueteA = (400/2) - (raqueteAltura/2);
     yRaqueteB = (400/2) - (raqueteAltura/2);
+    console.log(velocidadeYOponente);
+    console.log(yRaqueteB);
 }
 
 

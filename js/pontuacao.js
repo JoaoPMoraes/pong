@@ -11,13 +11,13 @@ function pontuacao () {
     {
         pointsPlayer2++;
         estatoInicial();
-        console.log(pointsPlayer2);
+        //console.log(pointsPlayer2);
     }
     if ( xBola > 595)
     {
         pointsPlayer1++;
         estatoInicial();
-        console.log(pointsPlayer1);
+        //console.log(pointsPlayer1);
     }
     
     pincelPlacar.fillStyle = "white";

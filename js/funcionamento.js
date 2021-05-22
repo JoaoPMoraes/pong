@@ -26,7 +26,7 @@ function refreshScreenPlay () {
 function playgame() {
     setInterval(refreshScreenPlay, 1);
 }
-var movimento = false;
+// var movimento = false;
 
 var startGame = document.querySelector("#startgame");
     startGame.addEventListener("click", function(){
@@ -35,8 +35,8 @@ var startGame = document.querySelector("#startgame");
         
     xBallSpeed = 1;
     yBallSpeed = 1;
-    velocidadeYOponente = 1;
-    console.log(movimento);
+    velocidadeYOponente = parseFloat((Math.random() * (1.0200 - 0.9800) + 0.9800).toFixed(4));
+    console.log(velocidadeYOponente);
     
 
 })
@@ -50,6 +50,8 @@ function finish () {
     pointsPlayer2 = 0;
     yRaqueteA = (400/2) - (raqueteAltura/2);
     yRaqueteB = (400/2) - (raqueteAltura/2);
+    velocidadeYOponente = 0;
+    
 }
 
 var stopgame = document.querySelector("#stopgame");
