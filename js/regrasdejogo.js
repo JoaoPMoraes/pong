@@ -3,8 +3,8 @@ var pincel = tela.getContext("2d");
 
 // ---------------- Variáveis
 
-var up = 38;
-var down = 40;
+var up = 87;
+var down = 83;
 var rate = 10;
 var raio = 10;
 var ballspeed = 0;
