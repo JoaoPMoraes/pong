@@ -1,0 +1,5 @@
+config/
+controllers/
+node_modules/
+package-lock.json
+package.json
